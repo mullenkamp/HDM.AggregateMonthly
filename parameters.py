@@ -38,4 +38,4 @@ sites_chunk = 100
 min_data_days = 25
 
 
-sql_min_max_stmt = "select ExtSiteID, DatasetTypeID, min([DateTime]) as FromDate, max([DateTime]) as ToDate, count([DateTime]) as Count from {tab} where ModDate >= {mod_date} and DatasetTypeID in ({dtypes}) group by ExtSiteID, DatasetTypeID"
+sql_min_max_stmt = "select ExtSiteID, DatasetTypeID, min([DateTime]) as FromDate, max([DateTime]) as ToDate, count([DateTime]) as Count from {tab} where ModDate >= '{mod_date}' and DatasetTypeID in ({dtypes}) group by ExtSiteID, DatasetTypeID"

@@ -17,7 +17,7 @@ run_time_start = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 
 ext_system = 'Hydro'
 
-max_date_stmt = "select max(RunTimeStart) from {log_tab} where HydroTable='{ts_tab}' and RunResult='pass' and ExtSystem='{ext_system}'".format(log_tab=param.log_table, ts_tab=param.ts_day_table, ext_system=ext_system)
+max_date_stmt = "select max(RunTimeStart) from {log_tab} where HydroTable='{ts_tab}' and RunResult='pass' and ExtSystem='{ext_system}'".format(log_tab=param.log_table, ts_tab=param.ts_month_table, ext_system=ext_system)
 
 last_date1 = mssql.rd_sql(server=param.hydro_server, database=param.hydro_database, stmt=max_date_stmt).loc[0][0]
 
